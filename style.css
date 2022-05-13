@@ -1,0 +1,207 @@
+:root {
+    --clr-primary: rgb(220, 220, 220);
+    --clr-secondary: rgb(180, 180, 180)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    /* border: 1px solid black; */
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--clr-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-container {
+    background-color: white;
+    width: 50%;
+    height: 50%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-container h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/*-----------------Input-----------------*/
+#user-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+#guess {
+    line-height: 1.5rem;
+    margin: 0 10px;
+    border-radius: 5px;
+    border: 0;
+    background-color: var(--clr-primary);
+    padding-left: 5px;
+}
+
+#guess:focus {
+    outline: 0;
+    background-color: var(--clr-secondary);
+}
+
+/*-----------------Buttons-----------------*/
+.btn {
+    width: 80px;
+    height: 1.5rem;
+    background-color: var(--clr-primary);
+    border: 2px solid var(--clr-primary);
+    border-radius: 5px;
+    transition: 0.1s ease-in-out;
+}
+
+.btn-again {
+    width: 80px;
+    height: 2rem;
+    background-color: var(--clr-primary);
+    border: 2px solid var(--clr-primary);
+    border-radius: 5px;
+    transition: 0.1s ease-in-out;
+}
+
+.btn:hover,
+.btn-again:hover {
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+}
+
+.btn:active {
+    border: 2px solid white;
+}
+
+.btn-again:active {
+    border: 2px solid cyan;
+}
+
+/*-----------------Hearts-----------------*/
+#heart-container {
+    width: 66%;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.fa-heart {
+    font-size: 2rem;
+    color: red;
+    margin-left: 5px;
+}
+
+/*-----------------Last Guess Sign-----------------*/
+#lastGuess-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 66%;
+}
+
+.fa-sign-hanging,
+#lastGuess-text {
+    font-size: 2rem;
+}
+
+#lastGuess-text {
+    margin-left: 10px;
+    width: 52px;
+    text-align: center;
+    line-height: 2rem;
+}
+
+/*-----------------Feedback-----------------*/
+.arrow-container {
+    background-color: var(--clr-secondary);
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.4);
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    width: 60%;
+}
+
+.youWin-container {
+    background-color: cyan;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.4);
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    width: 60%;
+}
+
+.youLose-container {
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.4);
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    width: 60%;
+}
+
+.arrow-disabled {
+    color: var(--clr-primary);
+    margin: 0 5px;
+}
+
+.arrow-enabled {
+    color: black;
+    margin: 0 5px;
+}
+
+#feedback-text {
+    width: 80%;
+    margin: 0 10px;
+}
+
+@media (max-width: 600px) {
+    #header-container h1 {
+        text-align: center;
+        margin: 15px;
+        font-size: 1rem;
+    }
+    .fa-heart,
+    .fa-sign-hanging,
+    #lastGuess-text {
+        font-size: 1.5rem;
+    }
+    #lastGuess-container {
+        display: flex;
+        justify-content: center;
+        width: 66%;
+    }
+    #heart-container {
+        width: 66%;
+        text-align: right;
+        margin-bottom: 10px;
+    }
+}

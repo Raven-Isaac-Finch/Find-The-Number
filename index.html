@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find The Number</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/sign-hanging-solid.svg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/651fa61eb5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="main-container">
+        <div id="header-container">
+            <h1>Find The Number Between 1 and 100</h1>
+        </div>
+        <div id="user-input">
+            <label for="guess" id="guessLabel">Enter Your Guess</label>
+            <input type="text" id="guess">
+            <button id="submitBtn" class="btn">Submit</button>
+        </div>
+        <div id="heart-container">
+            <!-- <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-heart"></i> -->
+        </div>
+        <div id="lastGuess-container">
+            <i class="fa-solid fa-sign-hanging"></i>
+            <p id="lastGuess-text"></p>
+        </div>
+        <div id="arrow-container" class="arrow-container">
+            <i id="downArrow" class="fa-solid fa-arrow-down arrow-disabled"></i>
+            <i id="upArrow" class="fa-solid fa-arrow-up arrow-disabled"></i>
+            <p id="feedback-text">You can do this!</p>
+            <!-- <button id="again-btn" class="btn-again">Again</button> -->
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
