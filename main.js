@@ -37,7 +37,7 @@ submit.addEventListener('click', function() {
         alert("Please Don't Leave the Space Empty");
     } else if (isNaN(userInput.value)) {
         alert("Numbers only please!");
-    } else if (userInput.value > 100 || userInput.value < 1) {
+    } else if (userInput.value > 99 || userInput.value < 1) {
         alert("The Number is between 1 and 100!");
     } else if (userInput.value > randomNumber) {
         lastGuess.innerHTML = `${userInput.value}`;
@@ -55,7 +55,7 @@ submit.addEventListener('click', function() {
         checkIfDead();
     } else if (userInput.value === randomNumber) {
         lastGuess.innerHTML = `${userInput.value}`;
-        feedbackText.innerHTML = 'You win! Good Job!';
+        feedbackText.innerHTML = 'Good Job!';
         console.log(lifeCount);
         feedbackContainer.className = 'youWin-container';
         upArrow.className = 'fa-solid fa-arrow-up arrow-disabled';
@@ -74,7 +74,7 @@ submit.addEventListener('click', function() {
 
 function checkIfDead() {
     if (lifeCount === 0) {
-        feedbackText.innerHTML = 'You lose! Try again!';
+        feedbackText.innerHTML = `You lose! It was ${randomNumber}.`;
         feedbackContainer.className = 'youLose-container';
         upArrow.className = 'fa-solid fa-arrow-up arrow-disabled';
         downArrow.className = 'fa-solid fa-arrow-down arrow-disabled';
