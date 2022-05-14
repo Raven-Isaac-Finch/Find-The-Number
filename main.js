@@ -60,6 +60,8 @@ submit.addEventListener('click', function() {
         feedbackContainer.className = 'youWin-container';
         upArrow.className = 'fa-solid fa-arrow-up arrow-disabled';
         downArrow.className = 'fa-solid fa-arrow-down arrow-disabled';
+        userInput.disabled = true;
+        submit.disabled = true;
         
         const againBtn = document.createElement('button');
         againBtn.className = 'btn-again';
